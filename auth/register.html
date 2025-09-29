@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق."
+    />
+    <title>Lia | Register</title>
+    <link rel="shortcut icon" type="img/png" href="../images/favicon.png" />
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="../css/fontawesome.min.css" />
+    <link rel="stylesheet" href="../css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="../css/select2.min.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+
+  <body>
+    <header class="auth-header">
+      <div class="container">
+        <div class="auth-header-content">
+          <a href="../index_guest.html" class="logo">
+            <img
+              loading="lazy"
+              src="../images/logo.svg"
+              alt="auth_form-logo"
+              class="img-contain"
+            />
+          </a>
+          <div class="log-link">
+            لديك حساب؟ <a href="login.html">سجل دخول</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="auth_form-body">
+      <div class="auth_form_responsive-content">
+        <div class="auth_form-content">
+          <div class="auth_form-form">
+            <div class="auth_form-head">
+              <h1 class="auth_form-title">إنشاء حساب جديد</h1>
+            </div>
+            <form action="register_otp.html">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="name" class="form-label">اسم المستخدم</label>
+                  <input type="text" class="form-control" name="name" />
+                </div>
+                <div class="form-group">
+                  <label for="phone" class="form-label">رقم الجوال</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    name="phone"
+                    intlTelInput
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">
+                    البريد الإلكتروني
+                  </label>
+                  <input type="email" class="form-control" name="email" />
+                </div>
+                <div class="form-group">
+                  <label for="gender" class="form-label"> الجنس </label>
+                  <select class="form-control" name="gender" select2>
+                    <option hidden>اختر من القائمة</option>
+                    <option value="male">ذكر</option>
+                    <option value="female">انثى</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="city" class="form-label"> المدينة </label>
+                  <select class="form-control" name="city" select2>
+                    <option hidden>اختر من القائمة</option>
+                    <option value="1">مدينة 1</option>
+                    <option value="2">مدينة 2</option>
+                    <option value="3">مدينة 3</option>
+                    <option value="4">مدينة 4</option>
+                    <option value="5">مدينة 5</option>
+                    <option value="6">مدينة 6</option>
+                    <option value="7">مدينة 7</option>
+                    <option value="8">مدينة 8</option>
+                    <option value="9">مدينة 9</option>
+                    <option value="10">مدينة 10</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="district" class="form-label"> الحي </label>
+                  <select class="form-control" name="district" select2>
+                    <option hidden>اختر من القائمة</option>
+                    <option value="1">حي 1</option>
+                    <option value="2">حي 2</option>
+                    <option value="3">حي 3</option>
+                    <option value="4">حي 4</option>
+                    <option value="5">حي 5</option>
+                    <option value="6">حي 6</option>
+                    <option value="7">حي 7</option>
+                    <option value="8">حي 8</option>
+                    <option value="9">حي 9</option>
+                    <option value="10">حي 10</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="phone" class="form-label"> كلمة المرور </label>
+                  <div class="password-content">
+                    <input
+                      type="password"
+                      name="password"
+                      class="form-control"
+                    />
+                    <span class="password-toggle">
+                      <i class="fal fa-eye"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="phone" class="form-label">
+                    تأكيد كلمة المرور
+                  </label>
+                  <div class="password-content">
+                    <input
+                      type="password"
+                      name="password"
+                      class="form-control"
+                    />
+                    <span class="password-toggle">
+                      <i class="fal fa-eye"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="terms-group">
+                <div class="checkbox">
+                  <label>
+                    <input
+                      type="checkbox"
+                      aria-label="terms"
+                      name="terms"
+                      required
+                    />
+                    <span class="mark">
+                      <i class="fa-regular fa-check"></i>
+                    </span>
+                    <span class="text">
+                      لقد قرأت وأوافق على
+                      <a
+                        data-bs-toggle="modal"
+                        data-bs-target="#termsModal"
+                        class="sidebar_menu-link"
+                      >
+                        الشروط والأحكام
+                      </a>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <button type="submit" class="submit-btn">تسجيل</button>
+            </form>
+          </div>
+          <p class="auth_form-copyrights">ليا 2025 ©</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Start Terms Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-hidden="true">
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <i class="far fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h2 class="modal-head">الشروط والأحكام</h2>
+            <p class="terms_modal-desc">
+              يرجى قراءة الشروط والأحكام التالية بعناية قبل استخدام تطبيق أو
+              موقع "ليا"، حيث أن استخدامك للخدمة يعني موافقتك على الالتزام بها:
+              المنتجات: جميع المنتجات المعروضة قابلة للتوفر وقد تختلف من منطقة
+              لأخرى حسب المخزون. نحتفظ بحق تعديل أو إلغاء أي طلب في حال حدوث خطأ
+              تقني أو نقص في الكمية المتاحة. الأسعار والدفع: جميع الأسعار تشمل
+              ضريبة القيمة المضافة (إن وجدت). يتم الدفع إلكترونيًا عبر وسائل
+              الدفع المعتمدة لدينا، ولا يتم تأكيد الطلب إلا بعد إتمام الدفع.
+              تسجيل الحساب: يجب تقديم بيانات صحيحة وكاملة عند إنشاء الحساب، وأنت
+              المسؤول عن الحفاظ على سرية معلومات الدخول الخاصة بك. حقوق الملكية:
+              جميع الصور، النصوص، الشعارات، والتصميمات هي ملك خاص لمتجر ليا، وأي
+              استخدام غير مصرح به يعد انتهاكًا قانونيًا. التعديلات: قد يتم تحديث
+              هذه الشروط من وقت لآخر، وسيتم إشعار المستخدمين بأي تغييرات جوهرية.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Terms Modal -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/intlTelInput.min.js"></script>
+    <script src="../js/select2.min.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

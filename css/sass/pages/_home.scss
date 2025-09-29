@@ -1,0 +1,48 @@
+.about-section {
+  margin: 120px 0;
+  @include xs {
+    margin: 70px 0;
+  }
+}
+
+.features-section {
+  padding: 100px 0 104px;
+  position: relative;
+  background-color: $primaryColor;
+  overflow: hidden;
+  color: #fff;
+  .pattern {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(39%);
+    aspect-ratio: 682 / 1041;
+    max-height: 129%;
+    z-index: 1;
+  }
+  .features-content {
+    position: relative;
+    z-index: 2;
+  }
+  @include xs {
+    padding: 50px 0;
+  }
+}
+
+.testimonials-section {
+  margin: 90px 0;
+  overflow: hidden;
+  @include xs {
+    margin: 60px 0;
+  }
+}
+
+.banner-section {
+  margin: 90px 0 60px;
+  @include xs {
+    .section-head {
+      margin-bottom: 25px;
+    }
+    margin: 60px 0 40px;
+  }
+}

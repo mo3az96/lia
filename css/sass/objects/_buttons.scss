@@ -1,0 +1,29 @@
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 0 22px;
+  min-width: 140px;
+  height: 48px;
+  border-radius: 24px;
+  background-color: $primaryColor;
+  font-size: 16px;
+  font-weight: 700;
+  @include focus(#fff);
+  &.second-btn {
+    border: 1px solid $primaryColor;
+    background-color: #fff;
+    color: $primaryColor;
+  }
+  &:hover {
+    opacity: 0.8;
+    background-color: $primaryColor;
+    color: #fff;
+  }
+  &:disabled {
+    background-color: #f5f5f5;
+    color: #c2c2c2;
+    cursor: not-allowed;
+  }
+}

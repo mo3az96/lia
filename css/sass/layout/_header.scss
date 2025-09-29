@@ -1,0 +1,9 @@
+.logo {
+  width: 111px;
+  aspect-ratio: 111/76;
+  display: flex;
+  align-items: center;
+  @include xs {
+    width: 70px;
+  }
+}
