@@ -1195,16 +1195,4 @@ html[dir=ltr] .select2-container.select2-container--disabled .select2-selection-
   color: #9b9b9b;
   text-align: center;
   margin: 0;
-}
-
-.logo {
-  width: 111px;
-  aspect-ratio: 111/76;
-  display: flex;
-  align-items: center;
-}
-@media (max-width: 767px) {
-  .logo {
-    width: 70px;
-  }
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=auth.css.map */
