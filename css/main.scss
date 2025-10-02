@@ -8,9 +8,19 @@
 @import "sass/objects/buttons";
 @import "sass/objects/form";
 @import "sass/objects/modal";
+@import "sass/objects/slider";
+@import "sass/objects/titles";
 
-@import "sass/auth/header";
-@import "sass/auth/body";
-@import "sass/auth/footer";
+@import "sass/components/main";
+@import "sass/components/categories";
+@import "sass/components/products";
+@import "sass/components/brands";
 
 @import "sass/layout/header";
+@import "sass/layout/search";
+@import "sass/layout/user";
+@import "sass/layout/lang";
+@import "sass/layout/navbar";
+@import "sass/layout/footer";
+
+@import "sass/pages/home";

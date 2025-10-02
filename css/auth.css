@@ -102,6 +102,10 @@ html[dir=ltr] body {
      object-fit: contain;
 }
 
+.en {
+  direction: ltr;
+}
+
 /* General Resets */
 * {
   outline: 0 !important;
