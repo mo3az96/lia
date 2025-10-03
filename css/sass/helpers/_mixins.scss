@@ -10,12 +10,6 @@
   }
 }
 
-@mixin cus-lg {
-  @media (max-width: 1300px) and (min-width: 1200px) {
-    @content;
-  }
-}
-
 @mixin md {
   @media (max-width: 1199px) {
     @content;

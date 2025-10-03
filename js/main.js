@@ -2,6 +2,31 @@ $(window).on("load", function () {
   $("body").removeClass("overflow");
 });
 $(document).ready(function () {
+  $(".menu-icon").click(function () {
+    $(".header-nav").addClass("active");
+    $("body").addClass("overflow");
+    $(".overlay").fadeIn();
+  });
+  $(".close-nav,.overlay").click(function () {
+    $(".header-nav").removeClass("active");
+    $("body").removeClass("overflow");
+    $(".overlay").fadeOut();
+  });
+  if ($(window).width() <= 767) {
+    $(".has-children .nav-link").click(function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+      $(".has-children .nav-link").not(this).removeClass("active");
+      $(this).toggleClass("active");
+      if ($(this).siblings().css("display") == "none") {
+        $(this).siblings().slideDown(500);
+      } else {
+        $(this).siblings().slideUp(500);
+      }
+      $(".has-children .nav-link").not(this).siblings().slideUp(500);
+    });
+  }
+
   if (typeof Swiper !== "undefined") {
     /***** main slider *****/
     var mainSwiper = new Swiper(".main-slider .swiper", {
@@ -43,7 +68,7 @@ $(document).ready(function () {
         },
       },
     });
-    
+
     /***** brands slider *****/
     var brandsSwiper = new Swiper(".brands-slider .swiper", {
       slidesPerView: "auto",

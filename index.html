@@ -86,8 +86,17 @@
           </div>
         </div>
       </div>
+      <div class="overlay"></div>
       <nav class="header-nav">
-        <div class="container">
+        <div class="container nav-content">
+          <div class="nav-head">
+            <div class="lang-content">
+              <a href="#!" class="lang-link">English</a>
+            </div>
+            <button type="button" class="close-nav">
+              <i class="fal fa-times"></i>
+            </button>
+          </div>
           <ul class="nav-list">
             <li class="nav-item">
               <a href="index.html" class="nav-link"> الصفحة الرئيسية </a>
@@ -2413,6 +2422,34 @@
       </div>
     </footer>
     <!-- End Footer -->
+
+    <!-- Start Terms Modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="modal-close" data-bs-dismiss="modal">
+              <i class="far fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h2 class="modal-head">تسجيل خروج</h2>
+            <p class="modal-desc">هل أنت متأكد أنك تريد تسجيل خروج؟</p>
+          </div>
+          <div class="modal-footer">
+            <a href="index_guest.html" class="modal-btn">نعم</a>
+            <button
+              type="button"
+              class="modal-btn modal_second-btn"
+              data-bs-dismiss="modal"
+            >
+              إلغاء
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Terms Modal -->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
