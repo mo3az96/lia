@@ -26,6 +26,16 @@ $(document).ready(function () {
       $(".has-children .nav-link").not(this).siblings().slideUp(500);
     });
   }
+  $(".filter-trigger").click(function () {
+    $(".category-side").addClass("active");
+    $("body").addClass("overflow");
+    $(".filters-overlay").fadeIn();
+  });
+  $(".filters-overlay").click(function () {
+    $(".category-side").removeClass("active");
+    $("body").removeClass("overflow");
+    $(".filters-overlay").fadeOut();
+  });
 
   if (typeof Swiper !== "undefined") {
     /***** main slider *****/

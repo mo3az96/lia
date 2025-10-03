@@ -17,9 +17,8 @@
     color: $primaryColor;
   }
   &:hover {
-    opacity: 0.8;
-    background-color: $primaryColor;
-    color: #fff;
+    background-color: $secondaryColor;
+    color: $primaryColor;
   }
   &:disabled {
     background-color: #f5f5f5;

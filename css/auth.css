@@ -230,9 +230,8 @@ button {
   color: #3F132C;
 }
 .submit-btn:hover {
-  opacity: 0.8;
-  background-color: #3F132C;
-  color: #fff;
+  background-color: #FF9999;
+  color: #3F132C;
 }
 .submit-btn:disabled {
   background-color: #f5f5f5;
