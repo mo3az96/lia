@@ -14,7 +14,7 @@
   &.second-btn {
     border: 1px solid $primaryColor;
     background-color: #fff;
-    color: $primaryColor;
+    @include focus($primaryColor);
   }
   &:hover {
     background-color: $secondaryColor;
@@ -42,7 +42,30 @@
   @include focus(#fff);
   &.modal_second-btn {
     background-color: #ebe2db;
+    @include focus($primaryColor);
+  }
+  &:hover {
+    background-color: $secondaryColor;
     color: $primaryColor;
+  }
+}
+
+.default-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 55px;
+  border-radius: 30px;
+  background-color: $primaryColor;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  @include focus(#fff);
+  &.second-btn {
+    background-color: #ebe2db;
+    @include focus($primaryColor);
   }
   &:hover {
     background-color: $secondaryColor;
