@@ -25,7 +25,7 @@ $(document).ready(function () {
   if (typeof $.fn.select2 !== "undefined") {
     if ($(window).width() >= 992) {
       $("select[select2]").select2({
-        customClass: "error" ,
+        customClass: "error",
         minimumResultsForSearch: Infinity,
       });
     }
@@ -118,4 +118,12 @@ $(document).ready(function () {
     }, "");
     $("input[name=otp]").val(inputValue);
   }
+
+  $(".date-content input").change(function () {
+    if ($(this).val() != "") {
+      $(this).addClass("filled");
+    } else {
+      $(this).removeClass("filled");
+    }
+  });
 });

@@ -208,150 +208,152 @@
     <section class="page-content">
       <div class="container">
         <div class="cart-content">
-          <div class="cart-info">
-            <h3 class="cart_info-title">نوع الطلب</h3>
-            <div class="request-type">
-              <div class="radio">
-                <label>
-                  <input type="radio" name="request-type" checked />
-                  <span class="mark"> </span>
-                  <span class="text"> طلب عادي </span>
-                </label>
+          <div class="cart-main">
+            <div class="cart-info">
+              <h3 class="cart_info-title">نوع الطلب</h3>
+              <div class="request-type">
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="request-type" checked />
+                    <span class="mark"> </span>
+                    <span class="text"> طلب عادي </span>
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="request-type" />
+                    <span class="mark"> </span>
+                    <span class="text">
+                      ارسال هدية <small>(التوصيل لمستلم آخر)</small>
+                    </span>
+                  </label>
+                </div>
               </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="request-type" />
-                  <span class="mark"> </span>
-                  <span class="text">
-                    ارسال هدية <small>(التوصيل لمستلم آخر)</small>
-                  </span>
-                </label>
-              </div>
-            </div>
-            <div class="address-content">
-              <h3 class="cart_info-title">عنوان التوصيل</h3>
-              <div class="nav cart_address-tabs">
-                <button
-                  type="button"
-                  class="active"
-                  data-bs-toggle="tab"
-                  data-bs-target="#add"
-                >
-                  <i class="fal fa-plus"></i>
-                  إضافة عنوان جديد
-                </button>
-                <button
-                  type="button"
-                  data-bs-toggle="tab"
-                  data-bs-target="#choose"
-                >
-                  <i class="fal fa-address-book"></i>
-                  اختيار من دفتر العناوين
-                </button>
-              </div>
+              <div class="address-content">
+                <h3 class="cart_info-title">عنوان التوصيل</h3>
+                <div class="nav cart_address-tabs">
+                  <button
+                    type="button"
+                    class="active"
+                    data-bs-toggle="tab"
+                    data-bs-target="#add"
+                  >
+                    <i class="fal fa-plus"></i>
+                    إضافة عنوان جديد
+                  </button>
+                  <button
+                    type="button"
+                    data-bs-toggle="tab"
+                    data-bs-target="#choose"
+                  >
+                    <i class="fal fa-address-book"></i>
+                    اختيار من دفتر العناوين
+                  </button>
+                </div>
 
-              <div class="tab-content">
-                <div class="tab-pane fade show active" id="add">
-                  <div class="form-grid">
-                    <div class="form-group">
-                      <label for="address_name" class="form-label">
-                        اسم العنوان
-                      </label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        name="address_name"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <label for="name" class="form-label">اسم المستلم</label>
-                      <input type="text" class="form-control" name="name" />
-                    </div>
-                    <div class="form-group">
-                      <label for="city" class="form-label"> المدينة </label>
-                      <select class="form-control" name="city" select2>
-                        <option hidden>اختر من القائمة</option>
-                        <option value="1">مدينة 1</option>
-                        <option value="2">مدينة 2</option>
-                        <option value="3">مدينة 3</option>
-                        <option value="4">مدينة 4</option>
-                        <option value="5">مدينة 5</option>
-                        <option value="6">مدينة 6</option>
-                        <option value="7">مدينة 7</option>
-                        <option value="8">مدينة 8</option>
-                        <option value="9">مدينة 9</option>
-                        <option value="10">مدينة 10</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label for="district" class="form-label"> الحي </label>
-                      <select class="form-control" name="district" select2>
-                        <option hidden>اختر من القائمة</option>
-                        <option value="1">حي 1</option>
-                        <option value="2">حي 2</option>
-                        <option value="3">حي 3</option>
-                        <option value="4">حي 4</option>
-                        <option value="5">حي 5</option>
-                        <option value="6">حي 6</option>
-                        <option value="7">حي 7</option>
-                        <option value="8">حي 8</option>
-                        <option value="9">حي 9</option>
-                        <option value="10">حي 10</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label for="address_desc" class="form-label">
-                        وصف العنوان
-                      </label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        name="address_desc"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <label for="phone" class="form-label">رقم الجوال</label>
-                      <input
-                        type="tel"
-                        class="form-control"
-                        name="phone"
-                        intlTelInput
-                      />
-                    </div>
-                    <div class="form-group">
-                      <label for="address_map" class="form-label">
-                        الموقع على الخريطة
-                      </label>
-                      <div class="map-input">
-                        <span class="icon">
-                          <i class="fal fa-map"></i>
-                        </span>
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="add">
+                    <div class="form-grid">
+                      <div class="form-group">
+                        <label for="address_name" class="form-label">
+                          اسم العنوان
+                        </label>
                         <input
                           type="text"
                           class="form-control"
-                          name="address_map"
-                          placeholder="اضغط لتحديد الموقع"
-                          readonly
+                          name="address_name"
                         />
+                      </div>
+                      <div class="form-group">
+                        <label for="name" class="form-label">اسم المستلم</label>
+                        <input type="text" class="form-control" name="name" />
+                      </div>
+                      <div class="form-group">
+                        <label for="city" class="form-label"> المدينة </label>
+                        <select class="form-control" name="city" select2>
+                          <option hidden>اختر من القائمة</option>
+                          <option value="1">مدينة 1</option>
+                          <option value="2">مدينة 2</option>
+                          <option value="3">مدينة 3</option>
+                          <option value="4">مدينة 4</option>
+                          <option value="5">مدينة 5</option>
+                          <option value="6">مدينة 6</option>
+                          <option value="7">مدينة 7</option>
+                          <option value="8">مدينة 8</option>
+                          <option value="9">مدينة 9</option>
+                          <option value="10">مدينة 10</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="district" class="form-label"> الحي </label>
+                        <select class="form-control" name="district" select2>
+                          <option hidden>اختر من القائمة</option>
+                          <option value="1">حي 1</option>
+                          <option value="2">حي 2</option>
+                          <option value="3">حي 3</option>
+                          <option value="4">حي 4</option>
+                          <option value="5">حي 5</option>
+                          <option value="6">حي 6</option>
+                          <option value="7">حي 7</option>
+                          <option value="8">حي 8</option>
+                          <option value="9">حي 9</option>
+                          <option value="10">حي 10</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="address_desc" class="form-label">
+                          وصف العنوان
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="address_desc"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="phone" class="form-label">رقم الجوال</label>
+                        <input
+                          type="tel"
+                          class="form-control"
+                          name="phone"
+                          intlTelInput
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label for="address_map" class="form-label">
+                          الموقع على الخريطة
+                        </label>
+                        <div class="map-input">
+                          <span class="icon">
+                            <i class="fal fa-map"></i>
+                          </span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="address_map"
+                            placeholder="اضغط لتحديد الموقع"
+                            readonly
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="tab-pane fade" id="choose">
-                  <div class="cart_address-list">
-                    <div class="cart_address-item">
-                      <label>
-                        <input type="radio" name="address" checked />
-                        <span class="mark"> </span>
-                        <span class="text"> العمل </span>
-                      </label>
-                    </div>
-                    <div class="cart_address-item">
-                      <label>
-                        <input type="radio" name="address" />
-                        <span class="mark"> </span>
-                        <span class="text"> المنزل </span>
-                      </label>
+                  <div class="tab-pane fade" id="choose">
+                    <div class="cart_radio-list">
+                      <div class="cart_radio-item">
+                        <label>
+                          <input type="radio" name="address" checked />
+                          <span class="mark"> </span>
+                          <span class="text"> العمل </span>
+                        </label>
+                      </div>
+                      <div class="cart_radio-item">
+                        <label>
+                          <input type="radio" name="address" />
+                          <span class="mark"> </span>
+                          <span class="text"> المنزل </span>
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </div>
