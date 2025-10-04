@@ -3485,4 +3485,58 @@ body:has(.product-page) footer {
 }
 .coupon-content .coupon-btn:hover {
   background-color: #3F132C;
+}
+
+.success-content {
+  width: 100%;
+  max-width: 315px;
+  text-align: center;
+  margin: 0 auto;
+}
+.success-content .success-icon {
+  font-size: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9dbcea;
+  margin: 0 0 20px;
+}
+@media (max-width: 767px) {
+  .success-content .success-icon {
+    font-size: 65px;
+    margin: 0 0 10px;
+  }
+}
+.success-content .success-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #3F132C;
+  margin: 0 0 10px;
+}
+.success-content .success-order {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #3F132C;
+  margin: 0 0 12px;
+}
+.success-content .success-order strong {
+  color: #ff9999;
+  font-size: 20px;
+  font-weight: 700;
+}
+.success-content .success-desc {
+  font-size: 16px;
+  font-weight: 500;
+  color: #3F132C;
+  margin: 0 0 30px;
+}
+.success-content .submit-btn {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.success-content :last-child {
+  margin: 0;
 }/*# sourceMappingURL=main.css.map */

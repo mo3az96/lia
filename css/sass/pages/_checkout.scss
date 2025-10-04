@@ -70,3 +70,55 @@
     }
   }
 }
+
+.success-content {
+  width: 100%;
+  max-width: 315px;
+  text-align: center;
+  margin: 0 auto;
+  .success-icon {
+    font-size: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9dbcea;
+    margin: 0 0 20px;
+    @include xs {
+      font-size: 65px;
+      margin: 0 0 10px;
+    }
+  }
+  .success-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: $primaryColor;
+    margin: 0 0 10px;
+  }
+  .success-order {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 16px;
+    font-weight: 500;
+    color: $primaryColor;
+    margin: 0 0 12px;
+    strong {
+      color: #ff9999;
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+  .success-desc {
+    font-size: 16px;
+    font-weight: 500;
+    color: $primaryColor;
+    margin: 0 0 30px;
+  }
+  .submit-btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  :last-child {
+    margin: 0;
+  }
+}
