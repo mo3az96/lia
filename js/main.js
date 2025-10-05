@@ -36,6 +36,16 @@ $(document).ready(function () {
     $("body").removeClass("overflow");
     $(".filters-overlay").fadeOut();
   });
+  $(".account-trigger").click(function () {
+    $(".account-trigger,.account-list").toggleClass("active");
+    $("body").addClass("overflow");
+    $(".account-overlay").fadeToggle();
+  });
+  $(".account-overlay").click(function () {
+    $(".account-trigger,.account-list").removeClass("active");
+    $("body").removeClass("overflow");
+    $(".account-overlay").fadeOut();
+  });
 
   if (typeof Swiper !== "undefined") {
     /***** main slider *****/

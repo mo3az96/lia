@@ -6,6 +6,17 @@
   @include xs {
     grid-template-columns: 1fr;
   }
+  &.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 30px;
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 20px;
+    }
+    @include xs {
+      grid-template-columns: 1fr;
+    }
+  }
 }
 .form-group {
   margin: 0 0 10px;
