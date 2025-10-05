@@ -3239,6 +3239,19 @@ body:has(.product-page) footer {
   opacity: 0;
   transition: all 0.3s ease-in-out;
 }
+.cart_radio-list .cart_radio-item label .images {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-inline-start: auto;
+  gap: 5px;
+}
+.cart_radio-list .cart_radio-item label .images img {
+  height: 26px;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .cart_radio-list .cart_radio-item label input {
   display: none;
 }

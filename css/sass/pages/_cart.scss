@@ -128,6 +128,18 @@
           transition: all 0.3s ease-in-out;
         }
       }
+      .images {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin-inline-start: auto;
+        gap: 5px;
+        img {
+          height: 26px;
+          width: auto;
+          object-fit: contain;
+        }
+      }
       input {
         display: none;
         &:checked {
