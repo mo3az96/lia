@@ -10,12 +10,10 @@
       name="description"
       content="هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق."
     />
-    <title>Lia | Account</title>
+    <title>Lia | Notifications</title>
     <link rel="shortcut icon" type="img/png" href="../images/favicon.png" />
     <link rel="stylesheet" href="../css/bootstrap.rtl.min.css" />
     <link rel="stylesheet" href="../css/fontawesome.min.css" />
-    <link rel="stylesheet" href="../css/select2.min.css" />
-    <link rel="stylesheet" href="../css/intlTelInput.min.css" />
     <link rel="stylesheet" href="../css/main.css" />
   </head>
 
@@ -228,9 +226,7 @@
             <a href="../index.html" class="breadcrumb-link"> الرئيسية </a>
           </li>
           <li class="breadcrumb-item">
-            <a href="account.html" class="breadcrumb-link">
-              تعديل بيانات الحساب
-            </a>
+            <a href="notifications.html" class="breadcrumb-link"> الإشعارات </a>
           </li>
         </ul>
       </div>
@@ -245,7 +241,7 @@
             <i class="fal fa-user-gear"></i>
           </button>
           <aside class="account-list">
-            <a href="account.html" class="account-item active">
+            <a href="account.html" class="account-item">
               <i class="fal fa-user"></i>
               تعديل بيانات الحساب
             </a>
@@ -269,7 +265,7 @@
               <i class="fal fa-address-book"></i>
               دفتر العناوين
             </a>
-            <a href="notifications.html" class="account-item">
+            <a href="notifications.html" class="account-item active">
               <i class="fal fa-bell"></i>
               الإشعارات
             </a>
@@ -296,83 +292,43 @@
           </aside>
           <div class="account-main">
             <div class="account-header">
-              <h2 class="account-title">تعديل بيانات الحساب</h2>
+              <h2 class="account-title">الإشعارات</h2>
+              <a href="#!" class="notifications-btn"> حذف كل الاشعارات </a>
             </div>
-            <form>
-              <div class="form-grid grid-3">
-                <div class="form-group">
-                  <label for="name" class="form-label">اسم المستخدم</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="name"
-                    value="عبدالله صالح"
+            <div class="notifications-list">
+              <div class="notification-item borderd">
+                <span class="item-icon">
+                  <img
+                    src="../images/icons/notifications.png"
+                    alt="notification"
+                    class="img-contain"
                   />
-                </div>
-                <div class="form-group">
-                  <label for="phone" class="form-label">رقم الجوال</label>
-                  <input
-                    type="tel"
-                    class="form-control"
-                    name="phone"
-                    value="+966123456789"
-                    intlTelInput
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="email" class="form-label">
-                    البريد الإلكتروني
-                  </label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    name="email"
-                    value="Abdallah.saleh@gmail.com"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="gender" class="form-label"> الجنس </label>
-                  <select class="form-control" name="gender" select2>
-                    <option hidden>اختر من القائمة</option>
-                    <option value="male" selected>ذكر</option>
-                    <option value="female">انثى</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="city" class="form-label"> المدينة </label>
-                  <select class="form-control" name="city" select2>
-                    <option hidden>اختر من القائمة</option>
-                    <option value="1">مدينة 1</option>
-                    <option value="2">مدينة 2</option>
-                    <option value="3">مدينة 3</option>
-                    <option value="4">مدينة 4</option>
-                    <option value="5" selected>الرياض</option>
-                    <option value="6">مدينة 6</option>
-                    <option value="7">مدينة 7</option>
-                    <option value="8">مدينة 8</option>
-                    <option value="9">مدينة 9</option>
-                    <option value="10">مدينة 10</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="district" class="form-label"> الحي </label>
-                  <select class="form-control" name="district" select2>
-                    <option hidden>اختر من القائمة</option>
-                    <option value="1">حي 1</option>
-                    <option value="2">حي 2</option>
-                    <option value="3" selected>الملز</option>
-                    <option value="4">حي 4</option>
-                    <option value="5">حي 5</option>
-                    <option value="6">حي 6</option>
-                    <option value="7">حي 7</option>
-                    <option value="8">حي 8</option>
-                    <option value="9">حي 9</option>
-                    <option value="10">حي 10</option>
-                  </select>
+                </span>
+                <div class="item-info">
+                  <p class="item-title">
+                    خصم خاص لك! عطر مختار + بوكيه ورد بـ 199 ريال 💐✨ ساري
+                    اليوم فقط!
+                  </p>
+                  <span class="item-date">2025/05/20 - 10:30</span>
                 </div>
               </div>
-              <button type="submit" class="submit-btn">حفظ التغييرات</button>
-            </form>
+              <div class="notification-item">
+                <span class="item-icon">
+                  <img
+                    src="../images/icons/notifications.png"
+                    alt="notification"
+                    class="img-contain"
+                  />
+                </span>
+                <div class="item-info">
+                  <p class="item-title">
+                    خصم خاص لك! عطر مختار + بوكيه ورد بـ 199 ريال 💐✨ ساري
+                    اليوم فقط!
+                  </p>
+                  <span class="item-date">2025/05/20 - 10:30</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -551,9 +507,6 @@
     <script src="../js/jquery.min.js"></script>
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/select2.min.js"></script>
-    <script src="../js/intlTelInput.min.js"></script>
-    <script src="../js/form.js"></script>
     <script src="../js/main.js"></script>
   </body>
 </html>

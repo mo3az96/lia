@@ -1,8 +1,9 @@
 .account-table-wrapper {
   overflow: hidden;
   width: 100%;
-  @include xs {
-    &:not(.no-scroll) {
+
+  &:not(.no-scroll) {
+    @include sm {
       padding-bottom: 8px;
       max-width: 100%;
       overflow-x: auto;
@@ -17,6 +18,9 @@
   width: 100%;
   &.fixed {
     table-layout: fixed;
+    td {
+      max-width: none;
+    }
   }
   th {
     background-color: $primaryColor;
@@ -26,6 +30,7 @@
     line-height: 1.5;
     padding: 22px 30px;
     padding-inline-end: 0;
+    white-space: nowrap;
     @include md {
       padding: 20px;
       padding-inline-end: 0;
@@ -40,14 +45,17 @@
     line-height: 1.5;
     font-weight: 400;
     padding-inline-end: 0;
+    vertical-align: baseline;
+    max-width: 130px;
     @include md {
       padding: 20px;
       padding-inline-end: 0;
     }
     &:has(.table-actions) {
       padding-inline: 15px;
-      @include xs {
-        padding: 20px 15px;
+      @include md {
+        padding: 20px;
+        padding-inline-end: 0;
       }
     }
   }
@@ -75,5 +83,11 @@
     &:hover {
       color: $primaryColor;
     }
+  }
+  .table-price {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 3px;
   }
 }

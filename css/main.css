@@ -1331,7 +1331,7 @@ html[dir=ltr] .date-content .form-control {
   overflow: hidden;
   width: 100%;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .account-table-wrapper:not(.no-scroll) {
     padding-bottom: 8px;
     max-width: 100%;
@@ -1348,6 +1348,9 @@ html[dir=ltr] .date-content .form-control {
 .account-table.fixed {
   table-layout: fixed;
 }
+.account-table.fixed td {
+  max-width: none;
+}
 .account-table th {
   background-color: #3F132C;
   color: #fff;
@@ -1356,6 +1359,7 @@ html[dir=ltr] .date-content .form-control {
   line-height: 1.5;
   padding: 22px 30px;
   padding-inline-end: 0;
+  white-space: nowrap;
 }
 @media (max-width: 1199px) {
   .account-table th {
@@ -1372,6 +1376,8 @@ html[dir=ltr] .date-content .form-control {
   line-height: 1.5;
   font-weight: 400;
   padding-inline-end: 0;
+  vertical-align: baseline;
+  max-width: 130px;
 }
 @media (max-width: 1199px) {
   .account-table td {
@@ -1382,9 +1388,10 @@ html[dir=ltr] .date-content .form-control {
 .account-table td:has(.table-actions) {
   padding-inline: 15px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .account-table td:has(.table-actions) {
-    padding: 20px 15px;
+    padding: 20px;
+    padding-inline-end: 0;
   }
 }
 .account-table .table-contact {
@@ -1419,6 +1426,48 @@ html[dir=ltr] .date-content .form-control {
 }
 .account-table .table-action:hover {
   color: #3F132C;
+}
+.account-table .table-price {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 3px;
+}
+
+.account-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
+  margin: 0 0 20px;
+}
+.account-tabs button {
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 116px;
+  height: 41px;
+  border-radius: 22px;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ebebeb;
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+}
+.account-tabs button:focus {
+  color: #000000;
+}
+.account-tabs button.active {
+  background-color: #FF9999;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .account-tabs button {
+    min-width: unset;
+  }
 }
 
 .main-section {
@@ -3291,6 +3340,7 @@ body:has(.product-page) footer {
 .cart_radio-list {
   display: grid;
   gap: 10px;
+  width: 100%;
 }
 .cart_radio-list .cart_radio-item {
   display: flex;
@@ -3697,7 +3747,7 @@ body:has(.product-page) footer {
 
 .account-trigger {
   position: fixed;
-  top: 75px;
+  top: 120px;
   inset-inline-start: 0px;
   display: none;
   align-items: center;
@@ -3879,6 +3929,34 @@ body:has(.product-page) footer {
     padding: 0 15px;
   }
 }
+.account-main .notifications-btn {
+  flex-shrink: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 36px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee;
+  color: #a2a2a2;
+  transition: all 0.3s ease-in-out;
+}
+.account-main .notifications-btn:focus {
+  color: #a2a2a2;
+}
+.account-main .notifications-btn:hover {
+  background-color: #3F132C;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .account-main .notifications-btn {
+    padding: 0 15px;
+  }
+}
 .account-main .form-grid {
   margin-bottom: 16px;
 }
@@ -3890,4 +3968,240 @@ body:has(.product-page) footer {
   .account-main .submit-btn {
     width: 100%;
   }
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notification-item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  gap: 18px;
+}
+@media (max-width: 1199px) {
+  .notification-item {
+    gap: 10px;
+  }
+}
+@media (max-width: 991px) {
+  .notification-item {
+    gap: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .notification-item {
+    gap: 10px;
+  }
+}
+.notification-item .item-icon {
+  flex-shrink: 0;
+  width: 57px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3F132C;
+}
+@media (max-width: 1199px) {
+  .notification-item .item-icon {
+    width: 40px;
+  }
+}
+@media (max-width: 991px) {
+  .notification-item .item-icon {
+    width: 57px;
+  }
+}
+@media (max-width: 767px) {
+  .notification-item .item-icon {
+    width: 40px;
+  }
+}
+.notification-item .item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.notification-item .item-title {
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.5;
+  margin: 0;
+}
+.notification-item .item-date {
+  font-size: 12px;
+  color: #a1a1a1;
+}
+.notification-item.borderd {
+  background-color: #fff;
+  border: 2px solid #ebebeb;
+  padding: 18px;
+}
+
+.account-main .account-header:has(.wallet-actions) {
+  flex-wrap: wrap;
+}
+.account-main .wallet-actions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.account-main .wallet-btn {
+  flex-shrink: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 126px;
+  height: 36px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #cea3cd;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.account-main .wallet-btn:focus {
+  color: #fff;
+}
+.account-main .wallet-btn:nth-of-type(2) {
+  background-color: #9dbcea;
+}
+.account-main .wallet-btn:hover {
+  background-color: #3F132C;
+  color: #fff;
+}
+
+.wallet-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding-bottom: 40px;
+}
+@media (max-width: 1199px) {
+  .wallet-info {
+    gap: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .wallet-info {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+}
+.wallet-info .wallet-item {
+  border: 2px solid #eaf2f5;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+@media (max-width: 1199px) {
+  .wallet-info .wallet-item {
+    gap: 10px;
+    padding: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .wallet-info .wallet-item {
+    padding: 15px;
+    gap: 15px;
+  }
+}
+.wallet-info .wallet-item .item-icon {
+  flex-shrink: 0;
+  background-color: rgba(255, 153, 153, 0.15);
+  width: 50px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #FF9999;
+  font-size: 24px;
+}
+@media (max-width: 1199px) {
+  .wallet-info .wallet-item .item-icon {
+    width: 35px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 991px) {
+  .wallet-info .wallet-item .item-icon {
+    width: 40px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .wallet-info .wallet-item .item-icon {
+    width: 50px;
+    font-size: 24px;
+  }
+}
+.wallet-info .wallet-item .item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.wallet-info .wallet-item .total {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
+  color: #000000;
+  font-size: 24px;
+  font-weight: 700;
+}
+@media (max-width: 1199px) {
+  .wallet-info .wallet-item .total {
+    font-size: 16px;
+  }
+}
+@media (max-width: 991px) {
+  .wallet-info .wallet-item .total {
+    font-size: 24px;
+  }
+}
+.wallet-info .wallet-item .curreny {
+  font-size: 16px;
+}
+@media (max-width: 1199px) {
+  .wallet-info .wallet-item .curreny {
+    font-size: 14px;
+  }
+}
+@media (max-width: 991px) {
+  .wallet-info .wallet-item .curreny {
+    font-size: 16px;
+  }
+}
+.wallet-info .wallet-item .title {
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+}
+@media (max-width: 1199px) {
+  .wallet-info .wallet-item .title {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+@media (max-width: 991px) {
+  .wallet-info .wallet-item .title {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.wallet-tables .account-title {
+  margin: 0 0 15px;
 }/*# sourceMappingURL=main.css.map */
