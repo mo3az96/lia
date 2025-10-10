@@ -10,7 +10,7 @@
       name="description"
       content="هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق."
     />
-    <title>Lia | Account</title>
+    <title>Lia | Add Address</title>
     <link rel="shortcut icon" type="img/png" href="../images/favicon.png" />
     <link rel="stylesheet" href="../css/bootstrap.rtl.min.css" />
     <link rel="stylesheet" href="../css/fontawesome.min.css" />
@@ -228,9 +228,12 @@
             <a href="../index.html" class="breadcrumb-link"> الرئيسية </a>
           </li>
           <li class="breadcrumb-item">
-            <a href="account.html" class="breadcrumb-link">
-              تعديل بيانات الحساب
+            <a href="address_archive.html" class="breadcrumb-link">
+              دفتر العناوين
             </a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="address_add.html" class="breadcrumb-link"> إضافة جديد </a>
           </li>
         </ul>
       </div>
@@ -245,7 +248,7 @@
             <i class="fal fa-user-gear"></i>
           </button>
           <aside class="account-list">
-            <a href="account.html" class="account-item active">
+            <a href="account.html" class="account-item">
               <i class="fal fa-user"></i>
               تعديل بيانات الحساب
             </a>
@@ -265,7 +268,7 @@
               <i class="fal fa-heart"></i>
               المفضلة
             </a>
-            <a href="address_archive.html" class="account-item">
+            <a href="address_archive.html" class="account-item active">
               <i class="fal fa-address-book"></i>
               دفتر العناوين
             </a>
@@ -296,18 +299,17 @@
           </aside>
           <div class="account-main">
             <div class="account-header">
-              <h2 class="account-title">تعديل بيانات الحساب</h2>
+              <h2 class="account-title">اضافة عنوان جديد</h2>
             </div>
             <form>
               <div class="form-grid grid-3">
                 <div class="form-group">
-                  <label for="name" class="form-label">اسم المستخدم</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="name"
-                    value="عبدالله صالح"
-                  />
+                  <label for="name" class="form-label">اسم العنوان</label>
+                  <input type="text" class="form-control" name="address_name" />
+                </div>
+                <div class="form-group">
+                  <label for="name" class="form-label">اسم المستلم</label>
+                  <input type="text" class="form-control" name="name" />
                 </div>
                 <div class="form-group">
                   <label for="phone" class="form-label">رقم الجوال</label>
@@ -315,28 +317,8 @@
                     type="tel"
                     class="form-control"
                     name="phone"
-                    value="+966123456789"
                     intlTelInput
                   />
-                </div>
-                <div class="form-group">
-                  <label for="email" class="form-label">
-                    البريد الإلكتروني
-                  </label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    name="email"
-                    value="Abdallah.saleh@gmail.com"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="gender" class="form-label"> الجنس </label>
-                  <select class="form-control" name="gender" select2>
-                    <option hidden>اختر من القائمة</option>
-                    <option value="male" selected>ذكر</option>
-                    <option value="female">انثى</option>
-                  </select>
                 </div>
                 <div class="form-group">
                   <label for="city" class="form-label"> المدينة </label>
@@ -346,7 +328,7 @@
                     <option value="2">مدينة 2</option>
                     <option value="3">مدينة 3</option>
                     <option value="4">مدينة 4</option>
-                    <option value="5" selected>الرياض</option>
+                    <option value="5">الرياض</option>
                     <option value="6">مدينة 6</option>
                     <option value="7">مدينة 7</option>
                     <option value="8">مدينة 8</option>
@@ -360,7 +342,7 @@
                     <option hidden>اختر من القائمة</option>
                     <option value="1">حي 1</option>
                     <option value="2">حي 2</option>
-                    <option value="3" selected>الملز</option>
+                    <option value="3">الملز</option>
                     <option value="4">حي 4</option>
                     <option value="5">حي 5</option>
                     <option value="6">حي 6</option>
@@ -370,8 +352,31 @@
                     <option value="10">حي 10</option>
                   </select>
                 </div>
+                <div class="form-group">
+                  <label for="address_desc" class="form-label">
+                    وصف العنوان
+                  </label>
+                  <input type="text" class="form-control" name="address_desc" />
+                </div>
+                <div class="form-group">
+                  <label for="address_map" class="form-label">
+                    الموقع على الخريطة
+                  </label>
+                  <div class="map-input">
+                    <span class="icon">
+                      <i class="fal fa-map"></i>
+                    </span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="address_map"
+                      placeholder="اضغط لتحديد الموقع"
+                      readonly
+                    />
+                  </div>
+                </div>
               </div>
-              <button type="submit" class="submit-btn">حفظ التغييرات</button>
+              <button type="submit" class="submit-btn">اضافة</button>
             </form>
           </div>
         </div>

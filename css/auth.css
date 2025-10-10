@@ -807,7 +807,7 @@ html[dir=ltr] .select2-container.select2-container--disabled .select2-selection-
   cursor: pointer;
 }
 .radio label small {
-  color: #ff9999;
+  color: #FF9999;
   font-size: 100%;
 }
 .radio label .mark {

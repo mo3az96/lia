@@ -28,7 +28,7 @@
     gap: 9px;
     margin: 0 0 15px;
     span {
-      color: #ff9999;
+      color: $secondaryColor;
       display: flex;
       gap: 3px;
     }
@@ -77,8 +77,8 @@
         }
       }
       &.active {
-        border-color: #ff9999;
-        color: #ff9999;
+        border-color: $secondaryColor;
+        color: $secondaryColor;
       }
     }
   }

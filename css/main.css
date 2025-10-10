@@ -807,7 +807,7 @@ html[dir=ltr] .select2-container.select2-container--disabled .select2-selection-
   cursor: pointer;
 }
 .radio label small {
-  color: #ff9999;
+  color: #FF9999;
   font-size: 100%;
 }
 .radio label .mark {
@@ -1325,6 +1325,100 @@ html[dir=ltr] .date-content .form-control {
   .filter-trigger {
     display: flex;
   }
+}
+
+.account-table-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+@media (max-width: 767px) {
+  .account-table-wrapper:not(.no-scroll) {
+    padding-bottom: 8px;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .account-table-wrapper:not(.no-scroll) .account-table {
+    min-width: 800px;
+  }
+}
+
+.account-table {
+  width: 100%;
+}
+.account-table.fixed {
+  table-layout: fixed;
+}
+.account-table th {
+  background-color: #3F132C;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 22px 30px;
+  padding-inline-end: 0;
+}
+@media (max-width: 1199px) {
+  .account-table th {
+    padding: 20px;
+    padding-inline-end: 0;
+  }
+}
+.account-table td {
+  border-bottom: 1px solid #ececec;
+  min-height: 65px;
+  padding: 21px 30px;
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.5;
+  font-weight: 400;
+  padding-inline-end: 0;
+}
+@media (max-width: 1199px) {
+  .account-table td {
+    padding: 20px;
+    padding-inline-end: 0;
+  }
+}
+.account-table td:has(.table-actions) {
+  padding-inline: 15px;
+}
+@media (max-width: 767px) {
+  .account-table td:has(.table-actions) {
+    padding: 20px 15px;
+  }
+}
+.account-table .table-contact {
+  display: inline-flex;
+  direction: ltr;
+  color: inherit;
+  transition: all 0.3s ease-in-out;
+}
+.account-table .table-contact:focus {
+  color: inherit;
+}
+.account-table .table-contact:hover {
+  color: #3F132C;
+}
+.account-table .table-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.account-table .table-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  padding: 0;
+  color: #878787;
+  transition: all 0.3s ease-in-out;
+}
+.account-table .table-action:focus {
+  color: #878787;
+}
+.account-table .table-action:hover {
+  color: #3F132C;
 }
 
 .main-section {
@@ -3129,7 +3223,7 @@ body:has(.product-page) footer {
   margin: 0 0 15px;
 }
 .cart-info .cart_info-title span {
-  color: #ff9999;
+  color: #FF9999;
   display: flex;
   gap: 3px;
 }
@@ -3187,8 +3281,8 @@ body:has(.product-page) footer {
   }
 }
 .cart-info .cart_address-tabs button.active {
-  border-color: #ff9999;
-  color: #ff9999;
+  border-color: #FF9999;
+  color: #FF9999;
 }
 .cart-info .tab-content {
   padding: 18px 0 0;
@@ -3500,7 +3594,7 @@ body:has(.product-page) footer {
 .coupon-content .coupon-input:focus {
   box-shadow: none;
   outline: none;
-  border-color: #ff9999;
+  border-color: #FF9999;
   background-color: #fff;
 }
 .coupon-content .coupon-btn {
@@ -3516,7 +3610,7 @@ body:has(.product-page) footer {
   width: fit-content;
   font-size: 14px;
   font-weight: 700;
-  background-color: #ff9999;
+  background-color: #FF9999;
   color: #fff;
   transition: all 0.3s ease-in-out;
   border-radius: 24px;
@@ -3564,7 +3658,7 @@ body:has(.product-page) footer {
   margin: 0 0 12px;
 }
 .success-content .success-order strong {
-  color: #ff9999;
+  color: #FF9999;
   font-size: 20px;
   font-weight: 700;
 }
@@ -3590,7 +3684,7 @@ body:has(.product-page) footer {
 
 .account-content {
   display: grid;
-  grid-template-columns: 262px 1fr;
+  grid-template-columns: 1fr 3.2365fr;
   align-items: start;
   position: relative;
   gap: 30px;
@@ -3679,6 +3773,16 @@ body:has(.product-page) footer {
 .account-list .account-item:focus {
   color: #000000;
 }
+@media (max-width: 1199px) {
+  .account-list .account-item {
+    font-size: 14px;
+  }
+}
+@media (max-width: 991px) {
+  .account-list .account-item {
+    font-size: 16px;
+  }
+}
 .account-list .account-item i {
   color: #c5c5c5;
   font-size: 18px;
@@ -3734,11 +3838,46 @@ body:has(.product-page) footer {
   max-width: 100%;
   overflow: hidden;
 }
+.account-main .account-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 4px 0 30px;
+}
 .account-main .account-title {
   font-size: 20px;
   font-weight: 700;
   color: #3F132C;
-  margin: 0 0 30px;
+  margin: 0 0;
+}
+.account-main .account-btn {
+  flex-shrink: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 36px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FF9999;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.account-main .account-btn:focus {
+  color: #fff;
+}
+.account-main .account-btn:hover {
+  background-color: #3F132C;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .account-main .account-btn {
+    padding: 0 15px;
+  }
 }
 .account-main .form-grid {
   margin-bottom: 16px;
