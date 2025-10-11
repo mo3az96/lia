@@ -338,6 +338,24 @@ button {
     grid-template-columns: 1fr;
   }
 }
+.form-grid.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px 20px;
+}
+@media (max-width: 991px) {
+  .form-grid.grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 20px;
+  }
+}
+@media (max-width: 767px) {
+  .form-grid.grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+.form-grid .full-w {
+  grid-column: 1/-1;
+}
 
 .form-group {
   margin: 0 0 10px;
