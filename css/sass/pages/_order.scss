@@ -72,12 +72,19 @@
   @include xs {
     padding: 0 15px 20px;
   }
+  .order-products {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #d5d5d5;
+  }
   .order_product-item {
     display: grid;
     align-items: start;
-    border-bottom: 1px solid #d5d5d5;
     padding: 25px 0;
     grid-template-columns: 3fr repeat(3, 1fr);
+    border-bottom: 1px solid #d5d5d5;
+    &.return_product-item {
+      grid-template-columns: 3fr 1fr 2fr;
+    }
     @include xs {
       display: flex;
       justify-content: space-between;
@@ -101,7 +108,7 @@
   }
   .order_product-info {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: start;
     gap: 20px;
     @include md {
@@ -115,7 +122,7 @@
   .order_product-img {
     width: 63px;
     aspect-ratio: 1;
-    border-radius: 0;
+    border-radius: 5px;
     overflow: hidden;
     flex-shrink: 0;
     img {
@@ -173,6 +180,11 @@
       order: 2;
     }
   }
+  .order_product-duration {
+    @include xs {
+      order: 3;
+    }
+  }
   .lg-col {
     @include xs {
       display: none;
@@ -224,6 +236,12 @@
       align-items: center;
       gap: 3px;
     }
+  }
+
+  :last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-bottom: 0;
   }
 }
 
@@ -290,6 +308,55 @@
     line-height: 1.85;
     margin: 0 0 40px;
   }
+  .order_info-products {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+    .order_info-product {
+      display: flex;
+      align-items: start;
+      gap: 10px;
+    }
+    .order_info-product-img {
+      width: 44px;
+      aspect-ratio: 1;
+      border-radius: 5px;
+      flex-shrink: 0;
+      overflow: hidden;
+      img {
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+    .order_info-product-name {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 10px;
+      font-size: 14px;
+      color: #9f9f9f;
+      a {
+        @include focus($textColor);
+        &:hover {
+          color: $primaryColor;
+        }
+      }
+    }
+    .order_info-product-price {
+      font-size: 14px;
+      font-weight: 700;
+      color: $textColor;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+  }
+
   :last-child {
     margin-bottom: 0;
   }
