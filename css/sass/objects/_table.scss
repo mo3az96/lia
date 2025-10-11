@@ -51,12 +51,11 @@
       padding: 20px;
       padding-inline-end: 0;
     }
-    &:has(.table-actions) {
+  }
+  &.less-padding {
+    th,
+    td {
       padding-inline: 15px;
-      @include md {
-        padding: 20px;
-        padding-inline-end: 0;
-      }
     }
   }
   .table-contact {
@@ -89,5 +88,42 @@
     align-items: center;
     justify-content: start;
     gap: 3px;
+  }
+  .table-status {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: fit-content;
+    padding: 0 12px;
+    height: 24px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    overflow: hidden;
+    color: var(--color);
+    position: relative;
+    transform: perspective(1px);
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      opacity: 0.2;
+      background-color: var(--color);
+    }
+  }
+  .table-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+    text-decoration: underline;
+    @include focus(#e13612);
+    &:hover {
+      color: $primaryColor;
+      text-decoration: none;
+    }
   }
 }

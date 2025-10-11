@@ -26,7 +26,12 @@
     cursor: not-allowed;
   }
 }
-
+.form-modal-btns{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  width: 100%;
+}
 .modal-btn {
   display: flex;
   align-items: center;

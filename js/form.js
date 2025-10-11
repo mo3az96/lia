@@ -126,4 +126,18 @@ $(document).ready(function () {
       $(this).removeClass("filled");
     }
   });
+  
+  $(".file-content input[type=file]").change(function () {
+    let file_val;
+    if ($(this).val() == "") {
+      file_val = "";
+    } else {
+      file_val = splitFileName($(this).prop("files")[0].name);
+    }
+    $(this).parent(".file-content").find(".file-name").html(file_val[0]);
+    $(this)
+      .parent(".file-content")
+      .find(".file-type")
+      .html("." + file_val[1]);
+  });
 });
