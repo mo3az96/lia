@@ -243,6 +243,13 @@ button {
   cursor: not-allowed;
 }
 
+.form-modal-btns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  width: 100%;
+}
+
 .modal-btn {
   display: flex;
   align-items: center;
@@ -734,6 +741,12 @@ html[dir=ltr] .select2-container.select2-container--disabled .select2-selection-
   color: #000000;
 }
 
+.form-radios {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
 .checkbox {
   display: flex;
   align-items: center;
@@ -945,6 +958,59 @@ html[dir=ltr] .date-content .form-control {
 }
 .date-content:has(.filled) .form-control::-webkit-datetime-edit-fields-wrapper {
   opacity: 1;
+}
+
+.file-content {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+.file-content .form-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 6px;
+  padding-inline-start: 20px;
+}
+.file-content .file-content {
+  display: flex;
+  direction: ltr;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: calc(100% - 118px);
+}
+.file-content .file-name {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.file-content .file-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 108px;
+  height: 36px;
+  border-radius: 20px;
+  background-color: rgba(63, 19, 44, 0.1);
+  background-color: #FF9999;
+  font-size: 14px;
+  font-weight: 600;
+  flex-shrink: 0;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.file-content .file-btn:focus {
+  color: #fff;
+}
+.file-content input {
+  display: none;
+}
+.file-content:hover .file-btn {
+  background-color: #3F132C;
+  color: #fff;
 }
 
 @media (min-width: 400px) {
