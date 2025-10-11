@@ -4401,4 +4401,65 @@ body:has(.product-page) footer {
 .contact-form .submit-btn {
   margin-top: 20px;
   margin-inline-start: auto;
+}
+
+.info-content {
+  color: #000000;
+  line-height: 1.65;
+}
+.info-content h3 {
+  font-size: 16px;
+  line-height: 1.65;
+  font-weight: 700;
+  margin: 0;
+}
+.info-content p {
+  font-size: 16px;
+  line-height: 1.65;
+  font-weight: 400;
+  margin: 0;
+}
+.info-content ol,
+.info-content ul {
+  font-size: 16px;
+  line-height: 1.65;
+  font-weight: 400;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  padding-inline-start: 40px;
+}
+.info-content ul {
+  list-style-type: disc;
+}
+.info-content ol {
+  list-style-type: decimal;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 30px;
+}
+@media (max-width: 767px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+}
+.about-content .about-img {
+  width: 100%;
+  max-width: 553px;
+  aspect-ratio: 553/450;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background-color: #ebe2db;
+  margin: 8px auto;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .about-content .about-img {
+    max-width: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */
