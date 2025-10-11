@@ -717,3 +717,37 @@
     }
   }
 }
+
+.ratestars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin-bottom: 15px;
+  label {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    font-size: 35px;
+    i.fa-star {
+      color: #c5c5c5;
+      transition: all 0.3s ease;
+    }
+    &:hover {
+      i.fa-star,
+      ~ label i.fa-star {
+        color: #f5a61d;
+      }
+    }
+  }
+  input {
+    display: none;
+    &:checked {
+      ~ label {
+        i.fa-star {
+          color: #f5a61d;
+        }
+      }
+    }
+  }
+}

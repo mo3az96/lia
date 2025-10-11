@@ -126,7 +126,7 @@ $(document).ready(function () {
       $(this).removeClass("filled");
     }
   });
-  
+
   $(".file-content input[type=file]").change(function () {
     let file_val;
     if ($(this).val() == "") {
@@ -139,5 +139,19 @@ $(document).ready(function () {
       .parent(".file-content")
       .find(".file-type")
       .html("." + file_val[1]);
+  });
+
+  $(
+    "input[type=radio][name='reason'], input[type=radio][name='cancel_reason']"
+  ).on("change", function () {
+    const form = $(this).closest("form");
+    const other = form.find("input[type=radio][data-id=other]");
+    const otherReason = form.find(".other-reason");
+
+    if (other.is(":checked")) {
+      otherReason.removeClass("d-none");
+    } else {
+      otherReason.addClass("d-none");
+    }
   });
 });

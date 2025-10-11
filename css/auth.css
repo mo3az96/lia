@@ -1031,6 +1031,34 @@ html[dir=ltr] .date-content .form-control {
   color: #fff;
 }
 
+.ratestars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin-bottom: 15px;
+}
+.ratestars label {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  font-size: 35px;
+}
+.ratestars label i.fa-star {
+  color: #c5c5c5;
+  transition: all 0.3s ease;
+}
+.ratestars label:hover i.fa-star,
+.ratestars label:hover ~ label i.fa-star {
+  color: #f5a61d;
+}
+.ratestars input {
+  display: none;
+}
+.ratestars input:checked ~ label i.fa-star {
+  color: #f5a61d;
+}
+
 @media (min-width: 400px) {
   .modal .modal-dialog {
     --bs-modal-width: 375px;

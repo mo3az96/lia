@@ -10,7 +10,7 @@
       name="description"
       content="هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق."
     />
-    <title>Lia | Ongoing Order</title>
+    <title>Lia | Rated Order</title>
     <link rel="shortcut icon" type="img/png" href="../images/favicon.png" />
     <link rel="stylesheet" href="../css/bootstrap.rtl.min.css" />
     <link rel="stylesheet" href="../css/fontawesome.min.css" />
@@ -229,7 +229,7 @@
             <a href="order_archive.html" class="breadcrumb-link"> طلباتي </a>
           </li>
           <li class="breadcrumb-item">
-            <a href="order_ongoing_single.html" class="breadcrumb-link">
+            <a href="order_rated_single.html" class="breadcrumb-link">
               طلب #6000000092
             </a>
           </li>
@@ -298,8 +298,8 @@
           <div class="account-main">
             <div class="account-header order-header">
               <h2 class="account-title">طلب #6000000092</h2>
-              <span class="order-status" style="--color: #34b7ea">
-                جاري التجهيز
+              <span class="order-status" style="--color: #66a61b">
+                تم التوصيل
               </span>
               <div class="order_header-buttons">
                 <a href="#!" class="order_header-btn" download>
@@ -569,22 +569,27 @@
                   </span>
                 </li>
               </ul>
-            </div>
-            <div class="order-buttons">
-              <button
-                data-bs-toggle="modal"
-                data-bs-target="#reportModal"
-                class="order-btn"
-              >
-                الإبلاغ عن مشكلة
-              </button>
-              <button
-                data-bs-toggle="modal"
-                data-bs-target="#cancelModal"
-                class="order-btn"
-              >
-                إلغاء الطلب
-              </button>
+              <h3 class="order_info-title">تقييم الطلب</h3>
+              <div class="order_info-stars">
+                <i class="fas fa-sharp fa-star active"></i>
+                <i class="fas fa-sharp fa-star active"></i>
+                <i class="fas fa-sharp fa-star active"></i>
+                <i class="fas fa-sharp fa-star active"></i>
+                <i class="fas fa-sharp fa-star"></i>
+              </div>
+              <p class="order_info-desc">
+                هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما
+                سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
+                الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم
+                إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما- للأحرف عوضاً عن
+                استخدام "هنا يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو
+                (أي الأحرف) وكأنها نص مقروء. العديد من برامح النشر المكتبي
+                وبرامح تحرير صفحات الويب تستخدم لوريم إيبسوم بشكل إفتراضي كنموذج
+                عن النص، وإذا قمت بإدخال "lorem ipsum" في أي محرك بحث ستظهر
+                العديد من المواقع الحديثة العهد في نتائج البحث. على مدى السنين
+                ظهرت نسخ جديدة ومختلفة من نص لوريم إيبسوم، أحياناً عن طريق
+                الصدفة، وأحياناً عن عمد كإدخال بعض العبارات الفكاهية إليها.
+              </p>
             </div>
           </div>
         </div>
@@ -707,148 +712,6 @@
     </footer>
     <!-- End Footer -->
 
-    <!-- Start Report Modal -->
-    <div class="modal fade" id="reportModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <form action="" class="modal-form">
-            <div class="modal-header">
-              <button type="button" class="modal-close" data-bs-dismiss="modal">
-                <i class="far fa-xmark"></i>
-              </button>
-            </div>
-            <div class="modal-body">
-              <h2 class="modal-head">حدد سبب المشكلة</h2>
-              <div class="form-group">
-                <div class="form-radios">
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="reason" checked />
-                      <span class="mark"> </span>
-                      <span class="text"> الطلب غير مطابق للبيانات </span>
-                    </label>
-                  </div>
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="reason" />
-                      <span class="mark"> </span>
-                      <span class="text"> المنتج تالف </span>
-                    </label>
-                  </div>
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="reason" />
-                      <span class="mark"> </span>
-                      <span class="text"> لم استلم الطلب حتى الآن </span>
-                    </label>
-                  </div>
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="reason" data-id="other" />
-                      <span class="mark"> </span>
-                      <span class="text"> سبب اخر </span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group other-reason d-none">
-                <textarea
-                  placeholder="ادخل وصف نصي لا يقل عن 250 حرف"
-                  class="form-control"
-                ></textarea>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <div class="form-modal-btns">
-                <a href="order_reported_single.html" class="modal-btn">ارسال</a>
-                <button
-                  type="submit"
-                  data-bs-dismiss="modal"
-                  class="modal-btn modal_second-btn"
-                >
-                  إلغاء
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <!-- End Report Modal -->
-
-    <!-- Start Cancel Modal -->
-    <div class="modal fade" id="cancelModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-          <form action="" class="modal-form">
-            <div class="modal-header">
-              <button type="button" class="modal-close" data-bs-dismiss="modal">
-                <i class="far fa-xmark"></i>
-              </button>
-            </div>
-            <div class="modal-body">
-              <h2 class="modal-head">حدد سبب الإلغاء</h2>
-              <div class="form-group">
-                <div class="form-radios">
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="cancel_reason" checked />
-                      <span class="mark"> </span>
-                      <span class="text"> الطلب غير مطابق للبيانات </span>
-                    </label>
-                  </div>
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="cancel_reason" />
-                      <span class="mark"> </span>
-                      <span class="text"> المنتج تالف </span>
-                    </label>
-                  </div>
-                  <div class="radio">
-                    <label>
-                      <input type="radio" name="cancel_reason" />
-                      <span class="mark"> </span>
-                      <span class="text"> لم استلم الطلب حتى الآن </span>
-                    </label>
-                  </div>
-                  <div class="radio">
-                    <label>
-                      <input
-                        type="radio"
-                        name="cancel_reason"
-                        data-id="other"
-                      />
-                      <span class="mark"> </span>
-                      <span class="text"> سبب اخر </span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group other-reason d-none">
-                <textarea
-                  placeholder="ادخل وصف نصي لا يقل عن 250 حرف"
-                  class="form-control"
-                ></textarea>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <div class="form-modal-btns">
-                <a href="order_canceld_single.html" class="modal-btn">ارسال</a>
-                <button
-                  type="button"
-                  data-bs-dismiss="modal"
-                  class="modal-btn modal_second-btn"
-                >
-                  إلغاء
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <!-- End Cancel Modal -->
-
     <!-- Start Logout Modal -->
     <div class="modal fade" id="logoutModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -908,7 +771,6 @@
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/svg.js"></script>
-    <script src="../js/form.js"></script>
     <script src="../js/main.js"></script>
   </body>
 </html>
